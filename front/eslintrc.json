@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "React": "writable"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "react-hooks",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "no-unused-expressions": "warn",
+    "no-console": "warn",
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "import/extensions": 0,
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+    ],
+    "react/prop-types": 0,
+    "jsx-a11y/anchor-is-valid": ["error"],
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/img-redundant-alt": "warn",
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0
+  }
+}

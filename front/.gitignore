@@ -1,0 +1,12 @@
+# local env file
+.env
+
+# dependencies
+/node_modules
+
+# debug
+yarn-error.log*
+yarn-debug.log*
+
+# production
+/build
