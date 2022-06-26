@@ -1,0 +1,34 @@
+.btnWrapper {
+  @apply border-solid border;
+  @apply p-8;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    @apply text-white;
+  }
+}
+
+.green {
+  @apply border-greenDark;
+  @apply text-greenDark;
+  &:hover {
+    @apply bg-greenDark;
+  }
+}
+
+.purple {
+  @apply border-purpleDark;
+  @apply text-purpleDark;
+  &:hover {
+    @apply bg-purpleDark;
+  }
+}
+
+.gray {
+  @apply border-grayDark;
+  @apply text-grayDark;
+  &:hover {
+    @apply bg-grayDark;
+  }
+}

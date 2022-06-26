@@ -1,0 +1,16 @@
+.labelWrapper {
+  display: grid;
+  gap: 2px;
+  span {
+    text-transform: uppercase;
+  }
+}
+
+.inputWrapper {
+  border-radius: 4px;
+  @apply px-2 py-4;
+  @apply bg-greenLight;
+  &::placeholder {
+    @apply text-white;
+  }
+}
