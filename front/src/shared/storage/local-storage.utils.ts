@@ -1,7 +1,7 @@
 const STORAGE = localStorage;
 
 export const setToLocalStorage = ({ key, value }: Record<string, string>) => {
-  return STORAGE.setItem(key, value);
+  STORAGE.setItem(key, value);
 };
 
 export const getFromLocalStorage = (key: string) => {

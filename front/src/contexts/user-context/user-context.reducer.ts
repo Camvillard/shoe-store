@@ -12,7 +12,7 @@ export const loginUser = (user: UserData) => ({
 });
 
 export const logoutUser = () => ({
-  action: UserActionsType.Logout,
+  type: UserActionsType.Logout,
 });
 
 export const userReducer = (
