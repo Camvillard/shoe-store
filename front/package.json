@@ -33,6 +33,17 @@
     "lint": "eslint src --ext .ts,.tsx",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./prettierrc.json"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*test.*"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "src/**/*.mock.ts",
+      "src/**/*.type*.ts",
+      "src/**/*.actions.ts"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
