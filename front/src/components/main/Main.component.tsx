@@ -1,25 +1,28 @@
-import React from "react";
+import { useContext } from "react";
+
+import { UserContext } from "../../contexts/user-context/UserContextProvider.component";
+import Dashboard from "../dashboard/Dashboard.container";
+import LoginForm from "../login-form/LoginForm.component";
 
 import styles from "./main.module.scss";
 
-function App() {
+const App = () => {
+  const { state } = useContext(UserContext);
+  const { isLoggedIn } = state;
+
   return (
-    <div className="App">
+    <div className={styles.pageLayout}>
       <header className={styles.header}>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p className={styles.headerTitle}>Aldo - dashboard</p>
       </header>
-      <main>
-        <p className="font-bold underline">coucou</p>
+      <main className={styles.main}>
+        {isLoggedIn ? <Dashboard /> : <LoginForm />}
       </main>
+      <footer className={styles.footer}>
+        <p className={styles.footerContent}>footer goes here</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;

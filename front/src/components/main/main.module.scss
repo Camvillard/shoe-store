@@ -1,0 +1,22 @@
+.pageLayout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header,
+.footer {
+  display: grid;
+  grid-template-columns: 8px repeat(4, 1fr) 8px;
+}
+
+.headerTitle,
+.footerContent {
+  grid-column: 2 / span 4;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 8px repeat(4, 1fr) 8px;
+  gap: 16px;
+}
