@@ -4,6 +4,9 @@
 # dependencies
 /node_modules
 
+# testing
+/coverage*
+
 # debug
 yarn-error.log*
 yarn-debug.log*
