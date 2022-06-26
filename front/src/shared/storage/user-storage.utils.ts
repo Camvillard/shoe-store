@@ -10,19 +10,20 @@ export enum UserStorageKey {
   UserName = "user_name",
 }
 
-const updateUserInformations = () => {
+export const updateUserInformations = () => {
   const existingUserInformations = getFromLocalStorage(
     UserStorageKey.UserInformations
   );
   if (!existingUserInformations) return;
-  const existingValue = JSON.parse(existingUserInformations);
 
-  const allTimeConnexions = existingValue.allTimeConnexions
-    ? [...existingValue.allTimeConnexions, new Date()]
-    : [new Date()];
+  const existingValue = JSON.parse(existingUserInformations);
+  const today = new Date();
+  const allTimeConnexions = existingValue?.allTimeConnexions
+    ? [...existingValue.allTimeConnexions, today]
+    : [today];
 
   const newData = {
-    lastConnexion: new Date(),
+    lastConnexion: today,
     allTimeConnexions,
   };
 
@@ -35,7 +36,8 @@ const updateUserInformations = () => {
   });
 };
 
-const addNewUser = (userName: string) => {
+export const addNewUser = (userName: string) => {
+  if (!userName) return;
   setToLocalStorage({ key: UserStorageKey.UserName, value: userName });
   setToLocalStorage({
     key: UserStorageKey.UserInformations,
@@ -45,6 +47,7 @@ const addNewUser = (userName: string) => {
     }),
   });
 };
+
 export const addUserToLocalStorage = ({ userName }: UserData) => {
   const existingUserName = getFromLocalStorage(UserStorageKey.UserName);
   if (existingUserName === userName) {
