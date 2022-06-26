@@ -27,7 +27,8 @@
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --silent --coverage",
+    "test:dev": "react-scripts test --watch",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .ts,.tsx",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./prettierrc.json"
