@@ -16,7 +16,7 @@ You adjust the inventory whenever a new sale is completed. The return value incl
 
 `ALDO Ste-Catherine` store sold a pair of `ADERI` shoes. `ALDO Ste-Catherine` now has 10 pairs of `ADERI` left.
 
-## launch the projects
+## launch the project
 
 Run the following to start tapping into the inventory events.
 
