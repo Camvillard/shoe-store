@@ -1,0 +1,11 @@
+.dashboardWrapper {
+  grid-column: 2 / span 4;
+  display: grid;
+  gap: 32px;
+  align-content: start;
+}
+
+.salesWrapper {
+  display: grid;
+  gap: 24px;
+}
