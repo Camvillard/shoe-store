@@ -29,11 +29,11 @@ describe("updateUserInformations", () => {
     expect(JSON.parse).toHaveBeenCalledWith("{'coucou':'bonjour'}");
     JSON.parse = initialParse;
   });
-  it("should set to local storage the correct data if the existing value contains already an array for all time connexions", () => {
+  it("should set to local storage the correct data if the existing value contains already an array for all time connections", () => {
     mockedGetFromLocalStorage.mockReturnValue(
       JSON.stringify({
         firstName: "Hermione",
-        allTimeConnexions: [new Date("1989-07-14")],
+        allTimeConnections: [new Date("1989-07-14")],
       })
     );
     updateUserInformations();
@@ -42,12 +42,12 @@ describe("updateUserInformations", () => {
       key: UserStorageKey.UserInformations,
       value: JSON.stringify({
         firstName: "Hermione",
-        allTimeConnexions: [new Date("1989-07-14"), new Date()],
-        lastConnexion: new Date(),
+        allTimeConnections: [new Date("1989-07-14"), new Date()],
+        lastConnection: new Date(),
       }),
     });
   });
-  it("should set to local storage the correct data if the existing value does not contain an array for all time connexions", () => {
+  it("should set to local storage the correct data if the existing value does not contain an array for all time connections", () => {
     mockedGetFromLocalStorage.mockReturnValue(
       JSON.stringify({
         firstName: "Hermione",
@@ -59,8 +59,8 @@ describe("updateUserInformations", () => {
       key: UserStorageKey.UserInformations,
       value: JSON.stringify({
         firstName: "Hermione",
-        lastConnexion: new Date(),
-        allTimeConnexions: [new Date()],
+        lastConnection: new Date(),
+        allTimeConnections: [new Date()],
       }),
     });
   });
@@ -96,8 +96,8 @@ describe("addNewUser", () => {
     expect(mockedSetToLocalStorage).toHaveBeenNthCalledWith(2, {
       key: UserStorageKey.UserInformations,
       value: JSON.stringify({
-        lastConnexion: new Date(),
-        allTimeConnexions: [new Date()],
+        lastConnection: new Date(),
+        allTimeConnections: [new Date()],
       }),
     });
   });

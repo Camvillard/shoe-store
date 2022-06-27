@@ -1,0 +1,27 @@
+.details {
+  display: grid;
+  gap: 8px;
+}
+
+.detailLine {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto;
+  gap: 4px;
+  border-bottom: 1px dashed;
+  @apply border-gray;
+  @apply pb-8;
+  &:last-of-type {
+    border-bottom: 0px;
+  }
+}
+
+.model {
+  text-transform: lowercase;
+}
+
+.date {
+  grid-column: 1 / span 2;
+  @apply text-12;
+  text-transform: uppercase;
+}

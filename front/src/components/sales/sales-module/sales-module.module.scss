@@ -1,0 +1,39 @@
+.wrapper {
+  @apply bg-purpleLight;
+  @apply p-16;
+  display: grid;
+  gap: 16px;
+}
+
+.header {
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  @apply text-14;
+  text-align: left;
+}
+
+.moduleActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switchBtn {
+  span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 import { UserContext } from "../../contexts/user-context/UserContextProvider.component";
+import DashboardContainer from "../dashboard/Dashboard.container";
 import LoginForm from "../login-form/LoginForm.component";
 
 import styles from "./main.module.scss";
@@ -15,7 +16,7 @@ const Main = () => {
         <p className={styles.headerTitle}>Aldo - dashboard</p>
       </header>
       <main className={styles.main}>
-        {isLoggedIn ? <p>dashboard</p> : <LoginForm />}
+        {isLoggedIn ? <DashboardContainer /> : <LoginForm />}
       </main>
       <footer className={styles.footer} data-testid="Main_footer">
         <p className={styles.footerContent}>footer goes here</p>

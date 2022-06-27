@@ -18,13 +18,13 @@ export const updateUserInformations = () => {
 
   const existingValue = JSON.parse(existingUserInformations);
   const today = new Date();
-  const allTimeConnexions = existingValue?.allTimeConnexions
-    ? [...existingValue.allTimeConnexions, today]
+  const allTimeConnections = existingValue?.allTimeConnections
+    ? [...existingValue.allTimeConnections, today]
     : [today];
 
   const newData = {
-    lastConnexion: today,
-    allTimeConnexions,
+    lastConnection: today,
+    allTimeConnections,
   };
 
   setToLocalStorage({
@@ -42,8 +42,8 @@ export const addNewUser = (userName: string) => {
   setToLocalStorage({
     key: UserStorageKey.UserInformations,
     value: JSON.stringify({
-      lastConnexion: new Date(),
-      allTimeConnexions: [new Date()],
+      lastConnection: new Date(),
+      allTimeConnections: [new Date()],
     }),
   });
 };
