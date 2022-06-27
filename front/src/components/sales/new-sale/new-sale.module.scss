@@ -1,0 +1,19 @@
+.saleWrapper {
+  position: fixed;
+  bottom: 16px;
+  left: 24px;
+  right: 24px;
+  @apply bg-info;
+  @apply p-12;
+  border-radius: 8px;
+}
+
+.header {
+  display: grid;
+  gap: 8px;
+}
+
+.title {
+  text-transform: uppercase;
+  @apply font-semibold;
+}
