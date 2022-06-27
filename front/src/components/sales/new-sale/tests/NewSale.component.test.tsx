@@ -11,9 +11,9 @@ const mockedReplaceStockValues = mocked(replaceStockValues);
 
 describe("NewSale component", () => {
   beforeEach(() => {
+    jest.resetAllMocks();
     jest.useFakeTimers();
     jest.spyOn(global, "setTimeout");
-    jest.resetAllMocks();
     jest.spyOn(React, "useState").mockImplementation(() => [true, jest.fn()]);
   });
   it("should render a component if displayNotification is true", () => {
