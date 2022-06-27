@@ -5,8 +5,8 @@ export type UserData = {
   userName: string;
   firstName: string;
   keepConnected: boolean;
-  lastConnexion?: Date;
-  allTimeConnexions?: Array<Date>;
+  lastConnection?: Date;
+  allTimeConnections?: Array<Date>;
 };
 
 export type UserGlobalContextState = {

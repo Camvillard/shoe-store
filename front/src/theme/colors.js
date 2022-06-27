@@ -7,7 +7,8 @@ module.exports = {
     grayDark: "#3A2E2C",
     gray: "#7F7776",
     grayLight: "#D3CECD",
-    alert: "#DA1F4C",
     white: "#fff",
+    alert: "#DA1F4C",
+    info: "#CC9E28",
   },
 };
